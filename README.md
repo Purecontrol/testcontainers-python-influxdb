@@ -11,27 +11,28 @@ Specify the version you want to use during the installation so that only the nee
 
 ```sh
 # for InfluxDB 1.x versions
-pip install testcontainers-python-influxdb[influxdb1]
+pip install "testcontainers-python-influxdb[influxdb1]"
 
 # for InfluxDB 2.x versions
-pip install testcontainers-python-influxdb[influxdb2]
+pip install "testcontainers-python-influxdb[influxdb2]"
 
 # for both InfluxDB 1.x and 2.x versions (unlikely, but who knows?)
-pip install testcontainers-python-influxdb[influxdb1,influxdb2]
+pip install "testcontainers-python-influxdb[influxdb1,influxdb2]"
 ```
 
 - if you use `poetry`:
 
 ```sh
 # for InfluxDB 1.x versions
-poetry install testcontainers-python-influxdb[influxdb1]
+poetry add "testcontainers-python-influxdb[influxdb1]"
 
 # for InfluxDB 2.x versions
-poetry install testcontainers-python-influxdb[influxdb2]
+poetry add "testcontainers-python-influxdb[influxdb2]"
 
 # for both InfluxDB 1.x and 2.x versions (unlikely, but who knows?)
-poetry install testcontainers-python-influxdb[influxdb1,influxdb2]
+poetry add "testcontainers-python-influxdb[influxdb1,influxdb2]"
 ```
+
 # Use cases
 
 ## InfluxDB v1
