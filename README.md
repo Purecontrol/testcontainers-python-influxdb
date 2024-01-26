@@ -1,6 +1,6 @@
 Brings InfluxDB in testcontainers-python (until [PR #413](https://github.com/testcontainers/testcontainers-python/pull/413) is merged).
-
-This project could be done on working hours thanks to my employer: [Purecontrol](https://www.purecontrol.com/) 🙏
+This project is hosted at https://github.com/Purecontrol/testcontainers-python-influxdb.
+Thanks to my employer - [Purecontrol](https://www.purecontrol.com/) - for sponsoring the development of this testing utility 🙏
 
 # Installation in your project
 
