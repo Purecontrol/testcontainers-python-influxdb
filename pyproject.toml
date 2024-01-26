@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "testcontainers-python-influxdb"
-version = "0.2.0"
+version = "0.2.1"
 description = "Brings InfluxDB in testcontainers-python (until PR #413 is merged)"
 authors = ["Luc Sorel-Giffo"]
 license = "Apache-2.0"

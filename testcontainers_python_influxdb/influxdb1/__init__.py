@@ -29,8 +29,9 @@ class InfluxDb1Container(InfluxDbContainer):
 
             >>> from testcontainers.influxdb1 import InfluxDbContainer
 
-            >>> with InfluxDbContainer() as influxdb:
-            ...    version = influxdb.get_version()
+            >>> with InfluxDbContainer("influxdb:1.8") as influxdb1_container:
+            ...    version = influxdb1_container.get_version()
+            ...    influxdb1_client = influxdb1_container.get_client()
     """
 
     def __init__(
@@ -44,7 +45,7 @@ class InfluxDb1Container(InfluxDbContainer):
     ):
         super().__init__(image, container_port, host_port, **docker_client_kw)
 
-    def get_client(self, **client_kwargs):
+    def get_client(self, **client_kwargs) -> InfluxDBClient:
         """
         Returns an instance of the influxdb client, for InfluxDB 1.x versions.
         Note that this client is not maintained anymore, but it is the only

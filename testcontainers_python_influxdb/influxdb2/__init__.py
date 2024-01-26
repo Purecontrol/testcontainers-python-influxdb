@@ -31,7 +31,16 @@ class InfluxDb2Container(InfluxDbContainer):
             >>> from testcontainers.influxdb2 import InfluxDb2Container
 
             >>> with InfluxDb2Container() as influxdb2:
-            ...    version = influxdb2.get_version()
+            >>> with InfluxDb2Container(
+            ...     "influxdb:2.7",
+            ...     init_mode="setup",
+            ...     username="root",
+            ...     password="secret-password",
+            ...     org_name="testcontainers-org",
+            ...     bucket="my-init-bucket",
+            ...     admin_token="secret-token",
+            ... ) as influxdb2_container:
+            ...     influxdb2_client, test_org = influxdb2_container.get_client(token="secret-token", org_name="testcontainers-org")
     """
 
     def __init__(
